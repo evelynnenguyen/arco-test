@@ -7,7 +7,11 @@ defmodule Arco do
   def map(a_list, a_function) when length(a_list) <= 1 do
       a_list = List.replace_at(a_list, 0, a_function.(List.first(a_list)))
   end
-  # When the list has more than 1 item
+  '''
+  When the list has more than 1 item, split it into head - the first element,
+  and tail - the rest. Recursively calculate and concatenate until there is only
+  1 item left.
+  '''
   def map(a_list, a_function) do
       a_list = List.replace_at(a_list, 0, a_function.(List.first(a_list)))
       [head | tail] = a_list
