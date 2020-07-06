@@ -6,7 +6,7 @@ defmodule Arco do
       IO.puts(head)
       head = a_function.(head)
       IO.puts(head)
-      IO.puts(a_list)
+      IO.inspect a_list, charlists: :as_lists
   end
   def map(a_list, a_function) do
       IO.puts("list length is larger or equal to 2")
